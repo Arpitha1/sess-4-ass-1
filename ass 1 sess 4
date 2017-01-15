@@ -1,0 +1,30 @@
+package pack1;
+
+public class A {
+	protected void method()//creating protected method
+	{                   
+		System.out.println(" this is a method in pakage pack1");//message to be displayed
+	}
+}
+
+
+
+
+
+
+
+package pack2;
+
+import pack1.A;//importing other package
+
+public class B extends A{//extending A class to access it's protected method
+  
+	void call(){   //inheriting protected method by creating method of class B
+		method();
+	}
+	public static void main(String[] args) {//main method
+		B obj = new B();//creating instance of class B
+		obj.call();//calling method call and inturn calling protected method from class B
+	}
+	}
+	
